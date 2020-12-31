@@ -11,3 +11,25 @@
         }else{
     	    $photo_name = '';
         }
+		
+		
+		or like below- 
+		
+		
+		 public function store(Request $request)
+			{
+				if ($request->hasFile('photo')){
+
+					$img = $request->file('photo');
+					$unique_name = md5(time().rand()).'.'. $img->getClientOriginalExtension();
+					$img -> move(public_path('media/students'), $unique_name);
+				}
+
+
+			  Student::create([
+
+				  'photo'   =>$unique_name,
+
+			  ]);
+
+    }
