@@ -1,0 +1,3 @@
+Route er better way holo - a. Frist a Route service provider theke protected $namespace = 'App\\Http\\Controllers';  eta comment out kore dete hobe. 
+
+B. then evabe route likhte hobe- Route::get('/register', 'RegisterController@register')->name('register');
